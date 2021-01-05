@@ -41,3 +41,6 @@ If it fails horribly at doing its job, JUnit 5 will take over.
 
 ## MockK
 The mocking library for testing Crudk uses. WIP!
+
+## Informational links
+- [Spek how-to](https://www.baeldung.com/kotlin-spek#:~:text=Spek%20is%20a%20Kotlin%2Dbased,tests%20that%20we%20might%20have.)
