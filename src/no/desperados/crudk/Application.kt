@@ -1,4 +1,4 @@
-package no.desperados
+package kotlin.crudk
 
 import io.ktor.application.*
 import io.ktor.response.*
@@ -14,8 +14,8 @@ import io.ktor.client.engine.apache.*
 import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
 import io.ktor.client.features.json.*
-import io.ktor.client.request.*
 import kotlinx.coroutines.*
+import kotlin.crudk.routes.customerRoutes
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -43,6 +43,7 @@ fun Application.module(testing: Boolean = false) {
 
     install(ContentNegotiation) {
         gson {
+            setPrettyPrinting()
         }
     }
 
@@ -55,6 +56,7 @@ fun Application.module(testing: Boolean = false) {
             serializer = GsonSerializer()
         }
     }
+
     runBlocking {
         // Sample for making a HTTP Client request
         /*
@@ -74,8 +76,7 @@ fun Application.module(testing: Boolean = false) {
         get("/json/gson") {
             call.respond(mapOf("hello" to "world"))
         }
+
+        customerRoutes()
     }
 }
-
-data class JsonSampleClass(val hello: String)
-

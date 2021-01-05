@@ -1,19 +1,7 @@
-package no.desperados
+package no.desperados.crudk
 
-import io.ktor.application.*
-import io.ktor.response.*
-import io.ktor.request.*
-import io.ktor.features.*
-import org.slf4j.event.*
-import io.ktor.routing.*
 import io.ktor.http.*
-import io.ktor.auth.*
-import io.ktor.gson.*
 import io.ktor.client.*
-import io.ktor.client.engine.apache.*
-import io.ktor.client.features.*
-import io.ktor.client.features.auth.*
-import io.ktor.client.features.json.*
 import io.ktor.client.request.*
 import kotlinx.coroutines.*
 import kotlin.test.*
@@ -21,7 +9,7 @@ import io.ktor.server.testing.*
 import io.ktor.client.engine.mock.*
 import io.ktor.client.statement.*
 import io.ktor.utils.io.*
-import kotlinx.coroutines.*
+import kotlin.crudk.module
 
 class ApplicationTest {
     @Test
