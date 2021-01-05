@@ -1,5 +1,22 @@
 # Crudk - a simple webserver 
 
+## What is the plan?
+Creating a CRUD component in Kotlin that can work as a starting building block in a microservice world.
+
+## TODOs
+[ ] Implement multiple routes
+[ ] Implement keycloak authentication
+[ ] Tests that uses MockK
+[ ] Tests that uses Spek
+[ ] API tests
+[ ] Service tests
+[ ] Repository tests
+[ ] Expose Prometheus stats
+[ ] Swagger documentation
+[ ] Gradle builds docker image
+[ ] Connect Ktorm to SQL database
+[ ] Find nice-to-haves and create a prioritized TODO
+
 ## Ktor
 Ktor is the web application framework used. It runs a Netty server,
 but it should be easy to configure it to run Jetty/Tomcat/CIO instead.
