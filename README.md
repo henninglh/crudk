@@ -3,18 +3,20 @@
 ## What is the plan?
 Creating a CRUD component in Kotlin that can work as a starting building block in a microservice world.
 
-## TODOs
+## TODOs in prioritized order
 [ ] Implement multiple routes
-[ ] Implement keycloak authentication
-[ ] Tests that uses MockK
-[ ] Tests that uses Spek
+[ ] Connect Ktorm to SQL database
+[ ] Correlation ID on calls
 [ ] API tests
 [ ] Service tests
 [ ] Repository tests
+[ ] Tests that uses MockK
+[ ] Tests that uses Spek
+[ ] Implement keycloak authentication
+[ ] Decide on dependency injection
+[ ] Gradle builds docker image
 [ ] Expose Prometheus stats
 [ ] Swagger documentation
-[ ] Gradle builds docker image
-[ ] Connect Ktorm to SQL database
 [ ] Find nice-to-haves and create a prioritized TODO
 
 ## Ktor
