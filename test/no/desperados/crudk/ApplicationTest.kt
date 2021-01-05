@@ -9,7 +9,6 @@ import io.ktor.server.testing.*
 import io.ktor.client.engine.mock.*
 import io.ktor.client.statement.*
 import io.ktor.utils.io.*
-import kotlin.crudk.module
 
 class ApplicationTest {
     @Test

@@ -1,4 +1,4 @@
-package kotlin.crudk.routes
+package no.desperados.crudk.routes
 
 import io.ktor.application.*
 import io.ktor.response.*
