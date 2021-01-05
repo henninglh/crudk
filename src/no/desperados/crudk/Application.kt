@@ -1,4 +1,4 @@
-package kotlin.crudk
+package no.desperados.crudk
 
 import io.ktor.application.*
 import io.ktor.response.*
@@ -15,7 +15,7 @@ import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
 import io.ktor.client.features.json.*
 import kotlinx.coroutines.*
-import kotlin.crudk.routes.customerRoutes
+import no.desperados.crudk.routes.customerRoutes
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
