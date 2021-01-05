@@ -3,6 +3,9 @@
 ## What is the plan?
 Creating a CRUD component in Kotlin that can work as a starting building block in a microservice world.
 
+## Where to start next time
+Dependency injection - framework or just create classes?
+
 ## TODOs in prioritized order
 [ ] Implement multiple routes
 [ ] Connect Ktorm to SQL database
