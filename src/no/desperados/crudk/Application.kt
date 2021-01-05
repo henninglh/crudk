@@ -25,6 +25,7 @@ fun Application.module(testing: Boolean = false) {
     install(CallLogging) {
         level = Level.INFO
         filter { call -> call.request.path().startsWith("/") }
+        callIdMdc("appname-correlation-id")
     }
 
     install(CORS) {
