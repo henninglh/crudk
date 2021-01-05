@@ -6,7 +6,7 @@ Creating a CRUD component in Kotlin that can work as a starting building block i
 ## TODOs in prioritized order
 [ ] Implement multiple routes
 [ ] Connect Ktorm to SQL database
-[ ] Correlation ID on calls
+[x] Correlation ID on calls
 [ ] API tests
 [ ] Service tests
 [ ] Repository tests
