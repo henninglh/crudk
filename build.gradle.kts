@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val mockk_version: String by project
 
 plugins {
     application
@@ -42,6 +43,7 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("io.ktor:ktor-client-mock:$ktor_version")
     testImplementation("io.ktor:ktor-client-mock-jvm:$ktor_version")
+    testImplementation("io.mockk:mockk:$mockk_version")
 }
 
 kotlin.sourceSets["main"].kotlin.srcDirs("src")
