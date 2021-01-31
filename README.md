@@ -17,7 +17,7 @@ Dependency injection - framework or just create classes?
 [ ] Tests that uses Spek
 [ ] Implement keycloak authentication
 [ ] Decide on dependency injection
-[ ] Gradle builds docker image
+[x] Docker multistage build
 [ ] Expose Prometheus stats
 [ ] Swagger documentation
 [ ] Find nice-to-haves and create a prioritized TODO
