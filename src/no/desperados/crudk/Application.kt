@@ -17,7 +17,7 @@ import io.ktor.client.features.json.*
 import kotlinx.coroutines.*
 import no.desperados.crudk.routes.customerRoutes
 
-fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
+fun main(args: Array<String>): Unit = io.ktor.server.tomcat.EngineMain.main(args)
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
