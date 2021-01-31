@@ -4,6 +4,7 @@ import no.desperados.crudk.models.Customer
 
 class CustomerRepository {
     fun getCustomer(id: Int): Customer? {
+        println("Retrieving customer with id $id")
         return null
     }
 
