@@ -1,8 +1,8 @@
-import org.gradle.api.tasks.testing.logging.TestLogEvent.STARTED
-import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
-import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
-import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+//import org.gradle.api.tasks.testing.logging.TestLogEvent.STARTED
+//import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+//import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+//import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
+//import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
 
 val ktor_version: String by project
 val kotlin_version: String by project
