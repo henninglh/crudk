@@ -1,5 +1,8 @@
-import org.jetbrains.kotlin.gradle.dsl.Coroutines
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.api.tasks.testing.logging.TestLogEvent.STARTED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
 
 val ktor_version: String by project
 val kotlin_version: String by project
@@ -54,3 +57,22 @@ kotlin.sourceSets["test"].kotlin.srcDirs("test")
 
 sourceSets["main"].resources.srcDirs("resources")
 sourceSets["test"].resources.srcDirs("testresources")
+
+
+//val test: Test by tasks.getting(Test::class) {
+//    useJUnitPlatform()
+//    testLogging {
+//        events = setOf(STARTED, PASSED, SKIPPED, FAILED)
+//        showCauses = true
+//        showExceptions = true
+//        showStackTraces = true
+//        exceptionFormat = FULL
+//    }
+//    maxHeapSize = "1024m"
+//    jvmArgs("-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-XX:MaxPermSize=256m")
+//}
+//
+//val sourcesJar by tasks.creating(Jar::class) {
+//    archiveClassifier.set("sources")
+//    from(sourceSets.getByName("main").allSource)
+//}
