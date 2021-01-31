@@ -14,7 +14,7 @@ COPY . .
 
 
 # Actual container
-FROM openjdk:12-jdk-alpine
+FROM openjdk:12-jdk-alpine AS RUNTIME_STAGE
 
 ENV APPLICATION_USER ktor
 ENV APP_HOME=/usr/app/
