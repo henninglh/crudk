@@ -10,11 +10,11 @@ Dependency injection - framework or just create classes?
 [ ] Implement multiple routes
 [ ] Connect Ktorm to SQL database
 [x] Correlation ID on calls
-[ ] API tests
-[ ] Service tests
-[ ] Repository tests
-[ ] Tests that uses MockK
-[ ] Tests that uses Spek
+[ ] API tests (http calls/headers etc.)
+[ ] Service tests (dependency injection)
+[ ] Repository tests (DB testing! Create DB in docker container and run queries)
+[ ] Tests that uses MockK (mocking API, DI and DB)
+[x] Tests that uses JUnit5
 [ ] Implement keycloak authentication
 [ ] Decide on dependency injection
 [x] Docker multistage build

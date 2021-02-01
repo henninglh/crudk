@@ -10,13 +10,13 @@ fun Application.customerRoutes() {
         route("/customer") {
             get("/{id}") {
                 println("Fetching customer...")
-                val fetchedCustomer = Customer(1, "Jenna")
+                val fetchedCustomer = Customer("1", "Jenna")
                 println("Fetched customer: $fetchedCustomer")
                 call.respond(fetchedCustomer)
             }
 
             post("/?") {
-                val newCustomer = Customer(2, "Arthur")
+                val newCustomer = Customer("2", "Arthur")
                 println("Created customer: $newCustomer")
                 call.respond(newCustomer)
             }

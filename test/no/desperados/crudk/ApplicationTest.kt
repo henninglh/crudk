@@ -9,10 +9,13 @@ import io.ktor.server.testing.*
 import io.ktor.client.engine.mock.*
 import io.ktor.client.statement.*
 import io.ktor.utils.io.*
+import org.junit.jupiter.api.Test
+
 
 class ApplicationTest {
+
     @Test
-    fun testRoot() {
+    fun `Testing HELLO WORLD!`() {
         withTestApplication({ module(testing = true) }) {
             handleRequest(HttpMethod.Get, "/").apply {
                 assertEquals(HttpStatusCode.OK, response.status())
@@ -22,7 +25,7 @@ class ApplicationTest {
     }
 
     @Test
-    fun testClientMock() {
+    fun `Testing header response`() {
         runBlocking {
             val client = HttpClient(MockEngine) {
                 engine {
