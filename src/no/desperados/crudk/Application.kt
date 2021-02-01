@@ -14,6 +14,11 @@ import io.ktor.client.engine.apache.*
 import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
 import io.ktor.client.features.json.*
+import io.ktor.metrics.micrometer.MicrometerMetrics
+import io.micrometer.core.instrument.binder.jvm.JvmGcMetrics
+import io.micrometer.core.instrument.binder.jvm.JvmMemoryMetrics
+import io.micrometer.prometheus.PrometheusConfig
+import io.micrometer.prometheus.PrometheusMeterRegistry
 import kotlinx.coroutines.*
 import no.desperados.crudk.routes.customerRoutes
 
@@ -23,6 +28,16 @@ fun main(args: Array<String>): Unit = io.ktor.server.tomcat.EngineMain.main(args
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
     println("Testing mode: $testing")
+    val micrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT)
+
+    install(MicrometerMetrics) {
+        registry = micrometerRegistry
+
+        meterBinders = listOf(
+            JvmMemoryMetrics(),
+            JvmGcMetrics()
+        )
+    }
 
     install(CallLogging) {
         level = Level.INFO
@@ -83,5 +98,9 @@ fun Application.module(testing: Boolean = false) {
         }
 
         customerRoutes()
+
+        get("/metrics") {
+            call.respond(micrometerRegistry.scrape())
+        }
     }
 }

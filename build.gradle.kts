@@ -8,6 +8,7 @@ val kotlin_version: String by project
 val logback_version: String by project
 val mockk_version: String by project
 val junit_version: String by project
+val prometheus_version: String by project
 
 plugins {
     application
@@ -21,6 +22,25 @@ application {
     mainClassName = "io.ktor.server.tomcat.EngineMain"
 }
 
+// TODO: Fix publishing of artifact! Publishing is needed for security scanning? Or does scanning this file work?
+//publishing {
+//    repositories {
+//        maven {
+//            name = Repositories.name
+//            url = uri(Repositories.nexusOK)
+//        }
+//    }
+//
+//    publications {
+//        register("mavenJava", MavenPublication::class) {
+//            from(components["java"])
+//            group = group
+//            artifactId = Project.artifactId
+//            version = getVersionFromVersionFile()
+//        }
+//    }
+//}
+
 repositories {
     mavenLocal()
     jcenter()
@@ -32,7 +52,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
     implementation("io.ktor:ktor-server-tomcat:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("io.ktor:ktor-metrics:$ktor_version")
+    implementation("io.micrometer:micrometer-registry-prometheus:$prometheus_version")
+    implementation("io.ktor:ktor-metrics-micrometer:$ktor_version")
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-auth:$ktor_version")
     implementation("io.ktor:ktor-auth-jwt:$ktor_version")
