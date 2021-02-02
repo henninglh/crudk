@@ -22,25 +22,6 @@ application {
     mainClassName = "io.ktor.server.tomcat.EngineMain"
 }
 
-// TODO: Fix publishing of artifact! Publishing is needed for security scanning? Or does scanning this file work?
-//publishing {
-//    repositories {
-//        maven {
-//            name = Repositories.name
-//            url = uri(Repositories.nexusOK)
-//        }
-//    }
-//
-//    publications {
-//        register("mavenJava", MavenPublication::class) {
-//            from(components["java"])
-//            group = group
-//            artifactId = Project.artifactId
-//            version = getVersionFromVersionFile()
-//        }
-//    }
-//}
-
 repositories {
     mavenLocal()
     jcenter()
