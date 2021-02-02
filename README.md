@@ -18,7 +18,7 @@ Dependency injection - framework or just create classes?
 [ ] Implement keycloak authentication
 [ ] Decide on dependency injection
 [x] Docker multistage build
-[ ] Expose Prometheus stats
+[x] Expose Prometheus stats
 [ ] Swagger documentation
 [ ] Find nice-to-haves and create a prioritized TODO
 

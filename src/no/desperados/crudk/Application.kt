@@ -99,6 +99,9 @@ fun Application.module(testing: Boolean = false) {
 
         customerRoutes()
 
+        // TODO:
+        //  1. Create separate route file for this
+        //  2. Find a way to secure this endpoint!
         get("/metrics") {
             call.respond(micrometerRegistry.scrape())
         }
