@@ -15,7 +15,8 @@ Dependency injection - framework or just create classes?
 [ ] Repository tests (DB testing! Create DB in docker container and run queries)
 [ ] Tests that uses MockK (mocking API, DI and DB)
 [x] Tests that uses JUnit5
-[ ] Implement keycloak authentication
+[ ] Add Jacoco for test coverage
+[ ] Implement keycloak authentication (or other sufficient auth standard protocol)
 [ ] Decide on dependency injection
 [x] Docker multistage build
 [x] Expose Prometheus stats
