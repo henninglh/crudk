@@ -13,6 +13,7 @@ val prometheus_version: String by project
 plugins {
     application
     kotlin("jvm") version "1.4.21"
+    id("com.github.johnrengelman.shadow") version "5.0.0"
 }
 
 group = "no.desperados"
@@ -69,6 +70,16 @@ tasks.named<Test>("test") {
         showExceptions = true
         showStackTraces = true
         exceptionFormat = FULL
+    }
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes(
+            mapOf(
+                "Main-Class" to application.mainClassName
+            )
+        )
     }
 }
 
