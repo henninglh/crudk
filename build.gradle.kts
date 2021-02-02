@@ -72,7 +72,7 @@ tasks.named<Test>("test") {
     }
 }
 
-//val sourcesJar by tasks.creating(Jar::class) {
-//    archiveClassifier.set("sources")
-//    from(sourceSets.getByName("main").allSource)
-//}
+val sourcesJar by tasks.creating(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.getByName("main").allSource)
+}
