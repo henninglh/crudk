@@ -20,7 +20,7 @@ group = "no.desperados"
 version = "0.0.1"
 
 application {
-    mainClassName = "io.ktor.server.tomcat.EngineMain"
+    mainClassName = "no.desperados.crudk.ApplicationKt"
 }
 
 repositories {
