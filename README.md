@@ -7,21 +7,21 @@ Creating a CRUD component in Kotlin that can work as a starting building block i
 Dependency injection - framework or just create classes?
 
 ## TODOs in prioritized order
-[ ] Implement multiple routes
-[ ] Connect Ktorm to SQL database
-[x] Correlation ID on calls
-[ ] API tests (http calls/headers etc.)
-[ ] Service tests (dependency injection)
-[ ] Repository tests (DB testing! Create DB in docker container and run queries)
-[ ] Tests that uses MockK (mocking API, DI and DB)
-[x] Tests that uses JUnit5
-[ ] Add Jacoco for test coverage
-[ ] Implement keycloak authentication (or other sufficient auth standard protocol)
-[ ] Decide on dependency injection
-[x] Docker multistage build
-[x] Expose Prometheus stats
-[ ] Swagger documentation
-[ ] Find nice-to-haves and create a prioritized TODO
+- [ ] Implement multiple routes
+- [ ] Connect Ktorm to SQL database
+- [x] Correlation ID on calls
+- [ ] API tests (http calls/headers etc.)
+- [ ] Service tests (dependency injection)
+- [ ] Repository tests (DB testing! Create DB in docker container and run queries)
+- [ ] Tests that uses MockK (mocking API, DI and DB)
+- [x] Tests that uses JUnit5
+- [ ] Add Jacoco for test coverage
+- [ ] Implement keycloak authentication (or other sufficient auth standard protocol)
+- [ ] Decide on dependency injection
+- [x] Docker multistage build
+- [x] Expose Prometheus stats
+- [ ] Swagger documentation
+- [ ] Find nice-to-haves and create a prioritized TODO
 
 ## Ktor
 Ktor is the web application framework used. It runs a Netty server,
